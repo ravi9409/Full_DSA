@@ -7,8 +7,8 @@ class MyStack {
 
     public MyStack(int capacity) {
         this.capacity = capacity;
-        this.top = -1;
-        this.myarray = new Integer[capacity];
+        myarray = new Integer[capacity];
+        top = -1;
     }
 
     public int size() {
@@ -20,9 +20,8 @@ class MyStack {
     }
 
     public void push(int value) {
-        if(top == capacity - 1)
+        if (top == capacity - 1)
             throw new StackFullException("Stack is full");
-
         top++;
         myarray[top] = value;
     }
@@ -39,19 +38,17 @@ class MyStack {
         return str;
     }
 
-    public Integer pop(){
+    public Integer pop() {
         if (top == -1)
             throw new StackFullException("Stack is empty");
-        int element=myarray[top];
-        myarray[top]=null;
+        int element = myarray[top];
+        myarray[top] = null;
         top--;
         return element;
     }
 
-    public Integer peek(){
-        if (top == -1)
-            throw new StackFullException("Stack is empty");
-        int element=myarray[top];
+    public Integer peek() {
+        int element = myarray[top];
         return element;
     }
 }
