@@ -1,4 +1,4 @@
-package Stack;
+package Stack.Implementation;
 
 class MyStack {
     private Integer myarray[];

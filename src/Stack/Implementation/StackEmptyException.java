@@ -1,4 +1,4 @@
-package Stack;
+package Stack.Implementation;
 
 public class StackEmptyException extends  RuntimeException{
 
